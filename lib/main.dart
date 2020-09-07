@@ -14,24 +14,19 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
-              radius: 50.0,
+              radius: 75.0,
               backgroundImage: AssetImage('images/portfolio_img.jpg'),
             ),
-            Center(
-            ),
+            Center(),
             Text(
               'Balasubramanian Gopalakrishnan',
-              style: (
-                  TextStyle(
+              style: (TextStyle(
                   fontFamily: 'Satisfy',
                   color: Colors.white,
                   fontSize: 30,
-                  fontWeight: FontWeight.bold
-                )
-              ),
+                  fontWeight: FontWeight.bold)),
             ),
-            Text(
-                'DISTRIBUTED SYSTEMS ENGINEER',
+            Text('DISTRIBUTED SYSTEMS ENGINEER',
                 style: (TextStyle(
                   fontFamily: 'Source Sans Pro',
                   color: Colors.white,
@@ -47,11 +42,56 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                  leading: Icon(
+                Icons.phone,
+                color: Colors.grey,
+              ),
+              title: (
+                Text(
+                  '+91 - 123 - 456 - 7890',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                  ),
+                )
+              ),
+              ),
 
-            )
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.grey,
+                ),
+                title: (
+                    Text(
+                      'balasubramanian.gopalakrishnan@gmail.com',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 14.0,
+                      ),
+                    )
+                ),
+              ),
+
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+            ),
+
           ],
         ),
       ),
+
     ));
   }
 }
